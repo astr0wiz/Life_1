@@ -85,8 +85,8 @@ void runGame()
     menubar.resetTimer();
     while( window.isOpen() )
     {
-        sf::Vector2f mvec{0., 0.};
-        float rvec{1.};
+        //sf::Vector2f mvec{0., 0.};
+        //float rvec{1.};
 
         sf::Event event;
         while( window.pollEvent( event ) )

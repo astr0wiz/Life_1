@@ -478,17 +478,18 @@
 	<SFML/Window/Event.hpp>
 	<list>
 
-1627738112 source:/nixdev/dev/cpp/prj/Life_1/src/Life/gamewindow.cpp
+1627741644 source:/nixdev/dev/cpp/prj/Life_1/src/Life/gamewindow.cpp
 	"gamewindow.h"
 
-1627738351 /nixdev/dev/cpp/prj/Life_1/include/Life/gamewindow.h
+1627741419 /nixdev/dev/cpp/prj/Life_1/include/Life/gamewindow.h
 	<SFML/Graphics.hpp>
 	"pubsub.h"
-
-1627740135 source:/nixdev/dev/cpp/prj/Life_1/src/Life/gamebar.cpp
 	"gamebar.h"
 
-1627740135 /nixdev/dev/cpp/prj/Life_1/include/Life/gamebar.h
+1627741644 source:/nixdev/dev/cpp/prj/Life_1/src/Life/gamebar.cpp
+	"gamebar.h"
+
+1627741644 /nixdev/dev/cpp/prj/Life_1/include/Life/gamebar.h
 	<iostream>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>

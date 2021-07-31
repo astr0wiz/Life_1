@@ -13,8 +13,9 @@ namespace Life
     class Gamebar: public sf::Drawable
     {
     public:
-        Gamebar( float menuwidth );
+        Gamebar();
         ~Gamebar();
+        void updateSizeAndTitle( float menuwidth, std::string gameTitle );
         void setElapsedTime( sf::Time elapsedTime );
         void resetTimer();
         static constexpr int GAMEBAR_HEIGHT = 32;

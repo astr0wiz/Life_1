@@ -33,13 +33,13 @@ namespace Life
 
     void GameWindow::setupBackground()
     {
-    backdrop.setSize( sf::Vector2f( baseWinSize.x, baseWinSize.y - Gamebar::GAMEBAR_HEIGHT ) );
-    backdrop.setPosition( sf::Vector2f( 0.f, Gamebar::GAMEBAR_HEIGHT ) );
-    backdrop.setFillColor( sf::Color2::Rich_Black );
+        backdrop.setSize( sf::Vector2f( baseWinSize.x, baseWinSize.y - Gamebar::GAMEBAR_HEIGHT ) );
+        backdrop.setPosition( sf::Vector2f( 0.f, Gamebar::GAMEBAR_HEIGHT ) );
+        backdrop.setFillColor( sf::Color2::Rich_Black );
     }
 
     void GameWindow::setupGameBar()
     {
-
+        gamebar.updateSizeAndTitle( baseWinSize.x, gameTitle );
     }
 }

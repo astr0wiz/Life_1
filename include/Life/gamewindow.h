@@ -25,6 +25,7 @@ namespace Life
         sf::RenderWindow window;
         sf::RectangleShape backdrop;
         sf::Vector2f baseWinSize{0., 0.};
+        Gamebar gamebar;
     };
 }
 #endif // GAMEWINDOW_H
