@@ -1,46 +1,47 @@
-#include "menubar.h"
+#include "gamebar.h"
 
-
-Menubar::Menubar( float menuwidth )
+namespace Life
 {
-    if( !menuFont.loadFromFile( "resources/ITCKRIST.TTF" ) )
+Gamebar::Gamebar( float menuwidth )
+{
+    if( !font.loadFromFile( "resources/ITCKRIST.TTF" ) )
     {
         std::cout << "Menu font not loaded!!" << std::endl;
     }
-    menubar.setSize( sf::Vector2f( menuwidth, MENUBAR_HEIGHT ) );
-    menubar.setPosition( sf::Vector2f( 0.f, 0.f ) );
-    menubar.setFillColor( sf::Color2::Dark_Gunmetal );
+    gamebar.setSize( sf::Vector2f( menuwidth, GAMEBAR_HEIGHT ) );
+    gamebar.setPosition( sf::Vector2f( 0.f, 0.f ) );
+    gamebar.setFillColor( sf::Color2::Dark_Gunmetal );
 
-    title.setFont( menuFont );
+    title.setFont( font );
     title.setCharacterSize( 18 );
-    title.setPosition( MENUBAR_PADDING_LEFT, MENUBAR_PADDING_TOP );
+    title.setPosition( GAMEBAR_PADDING_LEFT, GAMEBAR_PADDING_TOP );
     title.setString( "Life 0.1" );
     title.setFillColor( sf::Color2::Old_Silver );
 
-    hints.setFont( menuFont );
+    hints.setFont( font );
     hints.setCharacterSize( 18 );
     hints.setString( "[Space]: Pause/Continue  F1: Toggle Menu" );
-    hints.setPosition( ( menuwidth / 2.f ) - ( hints.getGlobalBounds().width / 2.f ), MENUBAR_PADDING_TOP );
+    hints.setPosition( ( menuwidth / 2.f ) - ( hints.getGlobalBounds().width / 2.f ), GAMEBAR_PADDING_TOP );
     hints.setFillColor( sf::Color2::Old_Silver );
 
-    playtime.setFont( menuFont );
+    playtime.setFont( font );
     playtime.setCharacterSize( 18 );
     playtime.setFillColor( sf::Color2::Old_Silver );
     playtime.setString("Running time: 00:00:00");
-    playtime.setPosition( menubar.getSize().x - (playtime.getGlobalBounds().width + MENUBAR_PADDING_LEFT), MENUBAR_PADDING_TOP );
+    playtime.setPosition( gamebar.getSize().x - (playtime.getGlobalBounds().width + GAMEBAR_PADDING_LEFT), GAMEBAR_PADDING_TOP );
 }
 
-Menubar::~Menubar()
+Gamebar::~Gamebar()
 {
     //dtor
 }
 
-void Menubar::resetTimer()
+void Gamebar::resetTimer()
 {
     totalPlaytime = sf::Time::Zero;
 }
 
-void Menubar::setElapsedTime( sf::Time elapsedTime )
+void Gamebar::setElapsedTime( sf::Time elapsedTime )
 {
     totalPlaytime += elapsedTime;
     float s = trunc(totalPlaytime.asSeconds());
@@ -56,11 +57,12 @@ void Menubar::setElapsedTime( sf::Time elapsedTime )
     os.flush();
 }
 
-void Menubar::draw( sf::RenderTarget& target, sf::RenderStates states ) const
+void Gamebar::draw( sf::RenderTarget& target, sf::RenderStates states ) const
 {
-    target.draw( menubar, states );
+    target.draw( gamebar, states );
     target.draw( title, states );
     target.draw( hints, states );
     target.draw( playtime, states );
 }
 
+}

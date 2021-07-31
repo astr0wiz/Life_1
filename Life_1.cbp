@@ -14,6 +14,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
+					<Add directory="include/Life" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,6 +25,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
+					<Add directory="include/Life" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -44,12 +46,18 @@
 			<Add directory="../SFML-2.5.1/lib" />
 		</Linker>
 		<Unit filename="include/Colors.h" />
+		<Unit filename="include/Life/gamebar.h" />
+		<Unit filename="include/Life/gamewindow.h" />
+		<Unit filename="include/Life/pubsub.h" />
 		<Unit filename="include/mapdata.h" />
 		<Unit filename="include/menubar.h" />
 		<Unit filename="include/menubutton.h" />
 		<Unit filename="include/menuwindow.h" />
 		<Unit filename="resources/dot.png" />
 		<Unit filename="src/Colors.cpp" />
+		<Unit filename="src/Life/gamebar.cpp" />
+		<Unit filename="src/Life/gamewindow.cpp" />
+		<Unit filename="src/Life/pubsub.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/mapdata.cpp" />
 		<Unit filename="src/menubar.cpp" />

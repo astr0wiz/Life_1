@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1618620448 source:/nixdev/dev/cpp/prj/Life_1/src/Colors.cpp
+1627605890 source:/nixdev/dev/cpp/prj/Life_1/src/Colors.cpp
 	"Colors.h"
 
-1611498680 /nixdev/dev/cpp/prj/Life_1/include/Colors.h
+1627605890 /nixdev/dev/cpp/prj/Life_1/include/Colors.h
 	<SFML/Graphics.hpp>
 
 1539885013 /nixdev/dev/cpp/prj/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -414,7 +414,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1627508431 source:/nixdev/dev/cpp/prj/Life_1/src/main.cpp
+1627605890 source:/nixdev/dev/cpp/prj/Life_1/src/main.cpp
 	<iostream>
 	<TGUI/TGUI.hpp>
 	"Colors.h"
@@ -422,7 +422,7 @@
 	"menuwindow.h"
 	"menubar.h"
 
-1627437335 /nixdev/dev/cpp/prj/Life_1/include/mapdata.h
+1627605890 /nixdev/dev/cpp/prj/Life_1/include/mapdata.h
 	<iostream>
 	<vector>
 	<SFML/System.hpp>
@@ -430,7 +430,7 @@
 	"Colors.h"
 	"menubar.h"
 
-1627437335 source:/nixdev/dev/cpp/prj/Life_1/src/mapdata.cpp
+1627605890 source:/nixdev/dev/cpp/prj/Life_1/src/mapdata.cpp
 	"mapdata.h"
 
 1627173046 source:/nixdev/dev/cpp/prj/Life_1/src/menu.cpp
@@ -442,27 +442,53 @@
 	<SFML/Graphics.hpp>
 	"Colors.h"
 
-1627263011 source:/nixdev/dev/cpp/prj/Life_1/src/menuwindow.cpp
+1627605890 source:/nixdev/dev/cpp/prj/Life_1/src/menuwindow.cpp
 	"menuwindow.h"
 
-1627243943 /nixdev/dev/cpp/prj/Life_1/include/menuwindow.h
+1627605890 /nixdev/dev/cpp/prj/Life_1/include/menuwindow.h
 	<iostream>
 	<vector>
 	<TGUI/TGUI.hpp>
 	"Colors.h"
 
-1627236606 source:/nixdev/dev/cpp/prj/Life_1/src/menubutton.cpp
+1627605890 source:/nixdev/dev/cpp/prj/Life_1/src/menubutton.cpp
 	"menubutton.h"
 
-1627236752 /nixdev/dev/cpp/prj/Life_1/include/menubutton.h
+1627605890 /nixdev/dev/cpp/prj/Life_1/include/menubutton.h
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	"Colors.h"
 
-1627506597 source:/nixdev/dev/cpp/prj/Life_1/src/menubar.cpp
+1627739544 source:/nixdev/dev/cpp/prj/Life_1/src/menubar.cpp
 	"menubar.h"
 
-1627506597 /nixdev/dev/cpp/prj/Life_1/include/menubar.h
+1627739555 /nixdev/dev/cpp/prj/Life_1/include/menubar.h
+	<iostream>
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+	"Colors.h"
+	<math.h>
+	<iostream>
+	<iomanip>
+
+1627737688 source:/nixdev/dev/cpp/prj/Life_1/src/Life/pubsub.cpp
+	"pubsub.h"
+
+1627737678 /nixdev/dev/cpp/prj/Life_1/include/Life/pubsub.h
+	<SFML/Window/Event.hpp>
+	<list>
+
+1627738112 source:/nixdev/dev/cpp/prj/Life_1/src/Life/gamewindow.cpp
+	"gamewindow.h"
+
+1627738351 /nixdev/dev/cpp/prj/Life_1/include/Life/gamewindow.h
+	<SFML/Graphics.hpp>
+	"pubsub.h"
+
+1627740135 source:/nixdev/dev/cpp/prj/Life_1/src/Life/gamebar.cpp
+	"gamebar.h"
+
+1627740135 /nixdev/dev/cpp/prj/Life_1/include/Life/gamebar.h
 	<iostream>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
