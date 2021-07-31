@@ -2,26 +2,23 @@
 
 namespace Life
 {
-    Gamebar::Gamebar()
+    Gamebar::Gamebar(sf::Font& gamebarFont)
     {
-        if( !font.loadFromFile( "resources/ITCKRIST.TTF" ) )
-        {
-            std::cout << "Menu font not loaded!!" << std::endl;
-        }
+        std::cout << "NEW Gamebar" << std::endl;
         gamebar.setPosition( sf::Vector2f( 0.f, 0.f ) );
         gamebar.setFillColor( sf::Color2::Dark_Gunmetal );
 
-        title.setFont( font );
-        title.setCharacterSize( 18 );
+        title.setFont( gamebarFont );
+        title.setCharacterSize( GAMEBAR_FONT_SIZE );
         title.setFillColor( sf::Color2::Old_Silver );
 
-        hints.setFont( font );
-        hints.setCharacterSize( 18 );
+        hints.setFont( gamebarFont );
+        hints.setCharacterSize( GAMEBAR_FONT_SIZE );
         hints.setString( "[Space]: Pause/Continue  F1: Toggle Menu" );
         hints.setFillColor( sf::Color2::Old_Silver );
 
-        playtime.setFont( font );
-        playtime.setCharacterSize( 18 );
+        playtime.setFont( gamebarFont );
+        playtime.setCharacterSize( GAMEBAR_FONT_SIZE );
         playtime.setFillColor( sf::Color2::Old_Silver );
         playtime.setString( "Running time: 00:00:00" );
     }

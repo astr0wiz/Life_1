@@ -414,13 +414,15 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1627605890 source:/nixdev/dev/cpp/prj/Life_1/src/main.cpp
+1627758616 source:/nixdev/dev/cpp/prj/Life_1/src/main.cpp
 	<iostream>
 	<TGUI/TGUI.hpp>
 	"Colors.h"
 	"mapdata.h"
 	"menuwindow.h"
 	"menubar.h"
+	"Assets/resourcemanager.h"
+	"Life/gamewindow.h"
 
 1627605890 /nixdev/dev/cpp/prj/Life_1/include/mapdata.h
 	<iostream>
@@ -478,18 +480,20 @@
 	<SFML/Window/Event.hpp>
 	<list>
 
-1627741644 source:/nixdev/dev/cpp/prj/Life_1/src/Life/gamewindow.cpp
+1627761268 source:/nixdev/dev/cpp/prj/Life_1/src/Life/gamewindow.cpp
 	"gamewindow.h"
 
-1627741419 /nixdev/dev/cpp/prj/Life_1/include/Life/gamewindow.h
+1627761131 /nixdev/dev/cpp/prj/Life_1/include/Life/gamewindow.h
+	<memory>
 	<SFML/Graphics.hpp>
 	"pubsub.h"
 	"gamebar.h"
+	"Assets/resourcemanager.h"
 
-1627741644 source:/nixdev/dev/cpp/prj/Life_1/src/Life/gamebar.cpp
+1627760795 source:/nixdev/dev/cpp/prj/Life_1/src/Life/gamebar.cpp
 	"gamebar.h"
 
-1627741644 /nixdev/dev/cpp/prj/Life_1/include/Life/gamebar.h
+1627760795 /nixdev/dev/cpp/prj/Life_1/include/Life/gamebar.h
 	<iostream>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -497,4 +501,16 @@
 	<math.h>
 	<iostream>
 	<iomanip>
+	<sys/types.h>
+	<sys/stat.h>
+	"Assets/resourcemanager.h"
+
+1627760265 source:/nixdev/dev/cpp/prj/Life_1/src/Assets/resourcemanager.cpp
+	"resourcemanager.h"
+
+1627760245 /nixdev/dev/cpp/prj/Life_1/include/Assets/resourcemanager.h
+	<iostream>
+	<sys/types.h>
+	<sys/stat.h>
+	<SFML/Graphics/Font.hpp>
 

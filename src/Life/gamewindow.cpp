@@ -2,10 +2,10 @@
 
 namespace Life
 {
-    GameWindow::GameWindow()
+    GameWindow::GameWindow( std::shared_ptr<Assets::ResourceManager> resourceManager )
     {
         setupBaseWindow();
-        setupGameBar();
+        setupGameBar( resourceManager );
         setupBackground();
     }
 
@@ -16,6 +16,7 @@ namespace Life
 
     void GameWindow::setupBaseWindow()
     {
+        std::cout << "Setting up base window" << std::endl;
         std::vector<sf::VideoMode> vmodes = sf::VideoMode::getFullscreenModes( );
         if ( vmodes.size( ) > 0 )
         {
@@ -33,13 +34,47 @@ namespace Life
 
     void GameWindow::setupBackground()
     {
-        backdrop.setSize( sf::Vector2f( baseWinSize.x, baseWinSize.y - Gamebar::GAMEBAR_HEIGHT ) );
-        backdrop.setPosition( sf::Vector2f( 0.f, Gamebar::GAMEBAR_HEIGHT ) );
+        std::cout << "Setting up background" << std::endl;
+        backdrop.setSize( sf::Vector2f( baseWinSize.x, baseWinSize.y ) );
+        backdrop.setPosition( sf::Vector2f( 0.f, 0.f ) );
         backdrop.setFillColor( sf::Color2::Rich_Black );
     }
 
-    void GameWindow::setupGameBar()
+    void GameWindow::setupGameBar( std::shared_ptr<Assets::ResourceManager> resourceManager )
     {
-        gamebar.updateSizeAndTitle( baseWinSize.x, gameTitle );
+        std::cout << "Setting up gamebar" << std::endl;
+        gamebar = std::make_shared<Gamebar>(resourceManager->getMainFont());
+        std::cout << "Updating gamebar size and title" << std::endl;
+        gamebar->updateSizeAndTitle( baseWinSize.x, gameTitle );
+    }
+
+    void GameWindow::run()
+    {
+        std::cout << "Running..." << std::endl;
+        while( window.isOpen() )
+        {
+            sf::Event event;
+            while( window.pollEvent( event ) )
+            {
+                if( event.type == sf::Event::Closed )
+                {
+                    window.close();
+                }
+                if( event.type == sf::Event::KeyPressed )
+                {
+                    switch( event.key.code )
+                    {
+                        case sf::Keyboard::Escape:
+                            window.close();
+                            break;
+                    }
+                }
+            }
+
+            window.clear( sf::Color2::Rich_Black );
+
+            window.draw( *gamebar );
+            window.display();
+        }
     }
 }

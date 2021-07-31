@@ -1,9 +1,11 @@
 #ifndef GAMEWINDOW_H
 #define GAMEWINDOW_H
 
+#include <memory>
 #include <SFML/Graphics.hpp>
 #include "pubsub.h"
 #include "gamebar.h"
+#include "Assets/resourcemanager.h"
 
 namespace Life
 {
@@ -12,12 +14,13 @@ namespace Life
     class GameWindow : public EventPublisher
     {
     public:
-        GameWindow();
+        GameWindow(std::shared_ptr<Assets::ResourceManager> resourceManager);
         virtual ~GameWindow();
         void setupBaseWindow();
-        void setupGameBar();
+        void setupGameBar(std::shared_ptr<Assets::ResourceManager> resourceManager);
         void setupBackground();
         sf::Vector2f getBaseWindowSize(){return baseWinSize;}
+        void run();
 
     protected:
 
@@ -25,7 +28,8 @@ namespace Life
         sf::RenderWindow window;
         sf::RectangleShape backdrop;
         sf::Vector2f baseWinSize{0., 0.};
-        Gamebar gamebar;
+        std::shared_ptr<Gamebar> gamebar;
+        std::shared_ptr<Assets::ResourceManager> resourceMgr;
     };
 }
 #endif // GAMEWINDOW_H
