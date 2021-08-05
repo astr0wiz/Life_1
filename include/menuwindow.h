@@ -5,7 +5,6 @@
 #include <TGUI/TGUI.hpp>
 #include "Colors.h"
 
-
 class Menuwindow: public sf::Drawable
 {
 public:

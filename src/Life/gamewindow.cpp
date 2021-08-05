@@ -7,6 +7,7 @@ namespace Life
         setupBaseWindow();
         setupGameBar( resourceManager );
         setupBackground();
+        setupMenuing();
     }
 
     GameWindow::~GameWindow()
@@ -46,6 +47,12 @@ namespace Life
         gamebar = std::make_shared<Gamebar>(resourceManager->getMainFont());
         std::cout << "Updating gamebar size and title" << std::endl;
         gamebar->updateSizeAndTitle( baseWinSize.x, gameTitle );
+    }
+
+    void GameWindow::setupMenuing()
+    {
+        gui.setTarget(window);
+        scenes.emplace("Menu",Scenes::MenuScene());
     }
 
     void GameWindow::run()
